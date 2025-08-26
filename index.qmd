@@ -1,0 +1,56 @@
+# Preamble {.unnumbered}
+
+:::: {.border #Lizenz}
+
+::: {layout="[20, 80]" layout-valign="center"}
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png){fig-alt="Symbol des Lizenzhinweises Creative Commons BY"} 
+
+Bausteine Computergestützter Datenanalyse. "Numpy Grundlagen" von Lukas Arnold, 
+Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch und 
+Sebastian Seipel ist lizensiert unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). 
+Das Werk ist abrufbar unter <https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen>. 
+Ausgenommen von der Lizenz sind alle Logos und anders gekennzeichneten Inhalte. 2024
+
+:::
+
+Zitiervorschlag
+
+Arnold, Lukas, Simone Arnold, Matthias Baitsch, Marc Fehr, Maik Poetzsch, und 
+Sebastian Seipel. 2024. „Bausteine Computergestützter Datenanalyse. 
+Werkzeugbaustein NumPy“. <https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen>.
+
+BibTeX-Vorlage
+
+```
+@misc{BCD-Styleguide-2024,
+ title={Bausteine Computergestützter Datenanalyse. Werkzeugbaustein NumPy},
+ author={Arnold, Lukas and Arnold, Simone and Baitsch, Matthias and Fehr, Marc and Poetzsch, Maik and Seipel, Sebastian},
+ year={2024},
+ url={https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen}} 
+```
+
+::::
+
+
+# Intro
+
+## Voraussetzungen
+{{< include voraussetzungen.md >}}
+
+## Verwendete Pakete und Datensätze
+
+### Pakete
+- [NumPy](https://numpy.org/)
+- [Matplotlib](https://matplotlib.org/)
+
+### Datensätze
+- [TC01.csv](https://firedynamics.github.io/LectureComputerScience/_downloads/0d1a3bfbc82fa134e08585d6151e9f46/TC01.csv)
+- [Bild: Mona Lisa](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg)
+- [Bild: Campus](https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg)
+
+## Bearbeitungszeit
+Geschätzte Bearbeitungszeit: 2h
+
+## Lernziele
+
+{{< include lernziele.md >}}

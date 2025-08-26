@@ -1,0 +1,155 @@
+# Creating NumPy Arrays
+
+```{python}
+#| echo: false
+import numpy as np
+```
+
+In Python, vectors are typically represented by lists and matrices by
+nested lists. For example, the vector
+
+:::: {layout-ncol=3 layout-valign="center" layout-halign="center"}
+$$
+(1, 2, 3, 4, 5, 6) 
+$$
+
+::: {.justify}
+and the matrix
+:::
+
+$$
+\begin{pmatrix}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{pmatrix}
+$$
+::::
+
+can be natively created in Python like this:
+
+```{python}
+lst = [1, 2, 3, 4, 5, 6]
+
+matrix = [[1, 2, 3], [4, 5, 6]]
+
+print(lst)
+print(matrix)
+```
+
+If you want to use NumPy arrays, you can use the `np.array()` command:
+
+```{python}
+
+lst = np.array([1, 2, 3, 4, 5, 6])
+
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(lst)
+print(matrix)
+```
+
+If you look at the output from the `print()` commands, two things stand out.
+First, the commas are gone, and second, the matrix is printed in a clean,
+readable format.
+
+It is also possible to create higher-dimensional arrays. This requires 
+another level of nesting. In the following example, a three-dimensional 
+matrix is created:
+
+```{python}
+matrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+```
+
+It is considered good practice to always initialize arrays. NumPy offers 
+three functions to create pre-initialized arrays. Alternatively, arrays can 
+be initialized with fixed values. You can use `np.zeros()` to set all values 
+to 0 or `np.ones()` to initialize all values with 1. These functions take the 
+shape in the form `[rows, columns]`. If you want to initialize all elements 
+with a specific value, use the `np.full()` function.
+
+```{python}
+np.zeros([2,3])
+```
+
+```{python}
+np.ones([2,3])
+```
+
+```{python}
+np.full([2,3],7)
+```
+
+::: {.callout-tip collapse="true"}
+
+## How could you create arrays filled with a specific value x?
+
+The trick is to initialize an array with `np.ones()` and then multiply the 
+array by the number `x`. In the following example, `x = 5`:
+
+```{python}
+np.ones([2,3]) * 5
+```
+:::
+
+If you want to create a vector with evenly spaced values, e.g., for an axis 
+in a plot, NumPy offers two options. Use `np.linspace(start, stop, #values)` 
+or `np.arange(start, stop, step)` to generate such arrays.
+
+```{python}
+np.linspace(0,1,11)
+```
+
+```{python}
+np.arange(0,10,2)
+```
+
+::: {.callout-tip collapse="true"}
+
+## Practice Exercise: Array Creation
+
+Create one NumPy array for each of the following tasks:
+
+1. with the values 1, 7, 42, 99  
+2. ten times the number 5  
+3. with numbers from 35 **up to and including** 50  
+4. with all even numbers from 20 **up to and including** 40  
+5. a matrix with 5 columns and 4 rows filled with the value 4  
+6. with 10 values evenly spaced from 22 **up to and including** 40
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Solution
+
+```{python}
+# 1. 
+print(np.array([1, 7, 42, 99]))
+```
+
+```{python}
+# 2. 
+print(np.full(10,5))
+```
+
+```{python}
+# 3. 
+print(np.arange(35, 51))
+```
+
+```{python}
+# 4. 
+print(np.arange(20, 41, 2))
+```
+
+```{python}
+# 5. 
+print(np.full([4,5],4))
+```
+
+```{python}
+# 6. 
+print(np.linspace(22, 40, 10))
+```
+
+:::
+
+:::

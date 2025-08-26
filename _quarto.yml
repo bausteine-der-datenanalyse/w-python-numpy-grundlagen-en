@@ -1,0 +1,43 @@
+project:
+  type: book
+
+book:
+  title: "w-python-numpy-grundlagen"
+  author:
+    - Lukas Arnold
+    - Simone Arnold
+    - Florian Bagemihl
+    - Matthias Baitsch
+    - Marc Fehr
+    - Maik Poetzsch
+    - Sebastian Seipel
+  date: today
+  language: en_EN
+  downloads: [pdf]
+  repo-url: "https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen"
+  repo-actions: [source]
+  favicon: "skript/00-bilder/favicon_bcd_new.svg"
+  sidebar:
+    title: "Werkzeugbaustein Grundlagen NumPy"
+    logo: "skript/00-bilder/logo_bcd_new.svg"
+
+bibliography: skript/references.bib
+
+format:
+  html:
+    theme: [cosmo, theme.scss]
+    lang: en
+    tbl-cap-location: bottom
+  pdf:
+    documentclass: scrreprt
+    lang: en
+    toc-depth: 1
+
+execute:
+  freeze: auto
+
+profile:
+  default: full
+  group: 
+    - [full, klausur]
+

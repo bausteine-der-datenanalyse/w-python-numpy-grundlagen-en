@@ -1,0 +1,28 @@
+# Exam Questions
+
+## Exercise 1 {.unnumbered}
+
+A rectangular concrete beam is subjected to a uniformly distributed load along its length. The stress distribution along the length of the beam shall be analyzed. The beam has a length of 10 meters, a width of 0.3 meters, and a height of 0.5 meters. The uniformly distributed load is 5000 N/m.
+
+1. Create a NumPy array `x` with 100 evenly spaced points along the length of the beam from 0 to 10 meters.
+
+2. Calculate the bending moments $M(x)$ along the length of the beam using the formula:
+$$
+M(x) = \frac{w \cdot x \cdot (L - x)}{2}
+$$
+where $w$ is the distributed load (in N/m), $x$ is the position along the beam (in m), and $L$ is the length of the beam (in m).
+
+3. Compute the maximum bending stress $\sigma_{\text{max}}(x)$ at each point along the beam using the formula:
+$$
+\sigma_{\text{max}}(x) = \frac{M(x) \cdot c}{I}
+$$
+where $c$ is the distance from the neutral axis to the outermost fiber of the beam (in m), and $I$ is the moment of inertia.  
+The moment of inertia of a rectangular cross-section is given by:
+$$
+I = \frac{b \cdot h^3}{12}
+$$
+where $b$ is the width (in m) and $h$ is the height of the beam (in m).
+
+4. Determine the maximum bending stress.
+
+5. Plot the stress distribution $\sigma_{\text{max}}(x)$ along the length of the beam.

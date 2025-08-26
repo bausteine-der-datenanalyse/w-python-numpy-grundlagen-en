@@ -1,0 +1,40 @@
+# Introduction to NumPy
+
+NumPy is a powerful library for Python that is used for numerical computing and data analysis. The name "NumPy" is an acronym for "Numerical Python".  
+NumPy itself is mainly written in the C programming language, which is why NumPy is generally very fast.
+
+NumPy allows efficient work with small and large vectors and matrices that would otherwise be cumbersome to implement in native Python. It also provides the ability to perform calculations with vectors and matrices easily—even for very large datasets.
+
+This introduction will help you understand and use the basics of NumPy.
+
+## Advantages & Disadvantages
+
+In most cases, operations with NumPy data structures are faster. However, unlike native Python lists, NumPy arrays can only hold one data type per list.
+
+::: {.callout-note collapse="true"}
+## Why is NumPy often faster?
+
+NumPy implements a more efficient memory storage for lists.  
+Native Python stores list contents in scattered memory locations, wherever space is available.
+
+![Storage of data in native Python](../skript/00-bilder/data_memory_list.svg){#fig-python_memory fig-alt="Sequential data is stored at random places in memory"}
+
+In contrast, NumPy arrays and matrices are stored in contiguous blocks of memory, allowing for more efficient data access.
+
+![Storage of data in NumPy](../skript/00-bilder/data_memory_numpy.svg){#fig-numpy_memory fig-alt="Sequential data is stored in a continuous memory block"}
+
+However, this also means that expanding a list is much faster than expanding arrays or matrices. Lists can use any free space, while arrays and matrices have to be copied to a new location in memory.
+
+:::
+
+## Importing the Package
+
+NumPy is imported with the following line. It is a global convention to use the alias `np`.
+
+```{python}
+import numpy as np
+```
+
+## References
+
+All functions introduced here can be found in the (English) NumPy documentation: [Documentation](https://numpy.org/doc/)

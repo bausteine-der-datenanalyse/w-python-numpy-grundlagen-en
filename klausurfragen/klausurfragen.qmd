@@ -1,0 +1,40 @@
+# Klausurfragen
+
+## Aufgabe 1 {.unnumbered}
+
+Ein rechteckiger Träger aus Beton wird entlang seiner Länge mit einer 
+gleichmäßig verteilten Last belastet. Die Spannungsverteilung entlang der 
+Länge des Trägers soll analysiert werden. Der Träger hat eine Länge von 10 
+Metern und eine Breite von 0.3 Metern. Die Höhe des Trägers beträgt 0.5 Meter. 
+Die gleichmäßig verteilte Last beträgt 5000 N/m.
+
+1. Erstellen Sie ein NumPy-Array `x` mit 100 gleichmäßig verteilten Punkten 
+entlang der Länge des Trägers von 0 bis 10 Metern.
+
+2. Berechnen Sie die Biegemomente $M(x)$ entlang der Länge des Trägers unter 
+Verwendung der Formel:
+$$
+\left[M(x) = \frac{w \cdot x \cdot (L - x)}{2}\right]
+$$
+wobei $w$ die verteilte Last (in N/m), $x$ die Position entlang des Trägers 
+(in m) und $L$ die Länge des Trägers (in m) ist.
+
+3. Berechnen Sie die maximale Biegespannung σmaxσmax​ an jedem Punkt entlang des 
+Trägers unter Verwendung der Formel:
+$$
+\left[\sigma_{\text{max}}(x) = \frac{M(x) \cdot c}{I}\right]
+$$
+wobei cc der Abstand von der neutralen Faser zur äußersten Faser des Trägers ist 
+(in m) und $I$ das Flächenträgheitsmoment ist. Das Flächenträgheitsmoment eines 
+rechteckigen Querschnitts ist:
+$$
+\left[
+I = \frac{b \cdot h^3}{12}
+\right]
+$$
+wobei $b$ die Breite (in m) und $h$ die Höhe des Trägers (in m) ist.
+
+4. Bestimmen SIe die maximale Biegespannung
+
+5. Plotten Sie die Spannungsverteilung $\sigma_{max}​(x)$ entlang der Länge des 
+Trägers.

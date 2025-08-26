@@ -1,0 +1,392 @@
+# Übung 
+
+## Aufgabe 1 Filmdatenbank
+
+In der ersten Aufgabe wollen wir fiktive Daten für Filmbewertungen untersuchen. Das Datenset ist dabei vereinfacht und beinhaltet folgende Spalten:
+
+1. Film ID
+2. Benutzer ID
+3. Bewertung
+
+Hier ist das Datenset:
+```{python}
+import numpy as np
+
+bewertungen = np.array([
+    [1, 101, 4.5],
+    [1, 102, 3.0],
+    [2, 101, 2.5],
+    [2, 103, 4.0],
+    [3, 101, 5.0],
+    [3, 104, 3.5],
+    [3, 105, 4.0]
+])
+```
+
+::: {.callout-tip }
+
+## a) Bestimmen Sie die jemals niedrigste und höchste Bewertung, die je gegeben wurde
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+niedrigste_bewertung = np.min(bewertungen[:,2])
+
+print("Die niedrigste jemals gegebene Bertung ist:", niedrigste_bewertung)
+
+hoechste_bewertung = np.max(bewertungen[:,2])
+
+print("Die hoechste jemals gegebene Bertung ist:", hoechste_bewertung)
+```
+:::
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+
+::: {.callout-tip }
+
+## b) Nennen Sie alle Bewertungen für Film 1
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+bewertungen_film_1 = bewertungen[np.where(bewertungen[:,0]==1)]
+
+print("Bewertungen für Film 1:\n", bewertungen_film_1)
+```
+:::
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+
+::: {.callout-tip }
+
+## c) Nennen Sie alle Bewertungen von Person 101
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+bewertungen_101 = bewertungen[np.where(bewertungen[:,1]==101)]
+
+print("Bewertungen von Person 101:\n", bewertungen_101)
+```
+:::
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+
+::: {.callout-tip }
+
+## d) Berechnen Sie die mittlere Bewertung für jeden Film und geben Sie diese nacheinander aus
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+for ID in [1, 2, 3]:
+
+    mittelwert = np.mean(bewertungen[np.where(bewertungen[:,0]==ID),2])
+
+    print("Die Mittlere Bewertung für Film", ID, "beträgt:", mittelwert) 
+```
+:::
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+
+::: {.callout-tip }
+
+## e) Finden SIe den Film mit der höchsten Bewertung
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+index_hoechste_bewertung = np.argmax(bewertungen[:,2])
+
+print(bewertungen[index_hoechste_bewertung,:])
+```
+:::
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+
+::: {.callout-tip }
+
+## f) Finden Sie die Person mit den meisten Bewertungen
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+einzigartige_person, anzahl = np.unique(bewertungen[:, 1],return_counts=True)
+
+meist_aktiver_person = einzigartige_person[np.argmax(anzahl)]
+
+print("Personen mit den meisten Bewertungen:", meist_aktiver_person)
+```
+:::
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+
+::: {.callout-tip }
+
+## g) Nennen Sie alle Filme mit einer Wertung von 4 oder besser.
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+index_bewertung_besser_vier = bewertungen[:,2] >= 4
+
+print("Filme mit einer Wertung von 4 oder besser:")
+
+print(bewertungen[index_bewertung_besser_vier,:])
+```
+:::
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+
+::: {.callout-tip }
+
+## h) Film Nr. 4 ist erschienen. Der Film wurde von Person 102 mit einer Note von 3.5 bewertet. Fügen Sie diesen zur Datenbank hinzu.
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+neue_bewertung = np.array([4, 102, 3.5])
+
+bewertungen = np.append(bewertungen, [neue_bewertung], axis=0)
+
+print(bewertungen)
+```
+:::
+:::
+
+<!-- ----------------------------------------------------------------------- -->
+
+::: {.callout-tip }
+
+## i) Person 102 hat sich Film Nr. 1 nochmal angesehen und hat das Ende jetzt doch verstanden. Dementsprechend soll die Berwertung jetzt auf 5.0 geändert werden.
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+```{python}
+bewertungen[(bewertungen[:, 0] == 1) & 
+            (bewertungen[:, 1] == 102), 2] = 5.0
+
+print("Aktualisieren der Bewertung:\n", bewertungen)
+```
+:::
+:::
+
+
+## Aufgabe 2 - Kryptographie - Caesar-Chiffre
+
+In dieser Aufgabe wollen wir Text sowohl ver- als auch entschlüsseln. 
+
+Jedes Zeichen hat über die sogenannte ASCII-Tabelle einen Zahlenwert zugeordnet. 
+
+| Buchstabe | ASCII Code | Buchstabe| ASCII Code |
+|-----------|------------|----------|------------|
+| a         | 97         | n        | 110        |
+| b         | 98         | o        | 111        |
+| c         | 99         | p        | 112        |
+| d         | 100        | q        | 113        |
+| e         | 101        | r        | 114        |
+| f         | 102        | s        | 115        |
+| g         | 103        | t        | 116        |
+| h         | 104        | u        | 117        |
+| i         | 105        | v        | 118        |
+| j         | 106        | w        | 119        |
+| k         | 107        | x        | 120        |
+| l         | 108        | y        | 121        |
+| m         | 109        | z        | 122        |
+
+: Ascii-Tabelle {#tbl-ascii .striped .hover}
+
+Der Einfachheit halber ist im Folgenden schon der Code zur Umwandlung von 
+Buchstaben in Zahlenwerten und wieder zurück aufgeführt. Außerdem beschränken 
+wir uns auf Texte mit kleinen Buchstaben.
+
+Ihre Aufgabe ist nun die Zahlenwerte zu verändern.
+
+Zunächste wollen wir eine einfache Caesar-Chiffre anwenden. Dabei werden alle 
+Buchstaben um eine gewisse Anzahl verschoben. Ist Beispielsweise der der 
+Verschlüsselungswert "1" wird aus einem A ein B, einem M, ein N. Ist der Wert 
+"4" wird aus einem A ein E und aus einem M ein Q. Die Verschiebung findet 
+zyklisch statt, das heißt bei einer Verschiebung von 1 wird aus einem Z ein A.
+
+```{python}
+import numpy as np
+
+# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt
+def buchstabe_zu_ascii(c):
+    return np.array([ord(c)])
+
+# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt
+def ascii_zu_buchstabe(a):
+    return chr(a)
+```
+
+::: {.callout-tip collapse="true"}
+
+## 1. Überlegen Sie sich zunächst wie man diese zyklische Verschiebung mathematisch ausdrücken könnte (Hinweis: Modulo Rechnung)
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+$$ \textrm{ASCII}_{\textrm{verschoben}} = (\textrm{ASCII} - 97 + \textrm{Versatz}) \textrm{ mod } 26 + 97$$
+
+:::
+
+:::
+
+::: {.callout-tip collapse="true"}
+
+## 2. Schreiben Sie Code der mit einer Schleife alle Zeichen umwandelt. 
+
+Zunächst sollen alle Zeichen in Ascii Code umgewandelt werden. Dann wird die Formel auf die Zahlenwerte angewendet und schlussendlich in einer dritten schleife wieder alle Werte in Buchstaben übersetzt.
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+```{python}
+import numpy as np
+
+# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt
+def buchstabe_zu_ascii(c):
+    return ord(c)
+
+# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt
+def ascii_zu_buchstabe(a):
+    return chr(a)
+
+klartext = "abrakadabra"
+versatz = 3
+
+umgewandelter_text = []
+verschluesselte_zahl = []
+verschluesselter_text= []
+
+
+
+for buchstabe in klartext:
+    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))
+print(umgewandelter_text)
+
+
+for zahl in umgewandelter_text:    
+    verschluesselt = (zahl - 97 + versatz) % 26 + 97
+    verschluesselte_zahl.append(verschluesselt)
+print(verschluesselte_zahl)
+
+
+for zahl in verschluesselte_zahl:    
+    verschluesselter_text.append(ascii_zu_buchstabe(zahl))
+print(verschluesselter_text)
+```
+
+:::
+
+:::
+
+::: {.callout-tip collapse="true"}
+
+## 3. Ersetzen Sie die Schleife, indem Sie die Rechenoperation mit einem NumPy-Array durchführen
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+
+```{python}
+import numpy as np
+
+# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt
+def buchstabe_zu_ascii(c):
+    return ord(c)
+
+# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt
+def ascii_zu_buchstabe(a):
+    return chr(a)
+
+klartext = "abrakadabra"
+versatz = 3
+
+umgewandelter_text = []
+verschluesselte_zahl = []
+verschluesselter_text= []
+
+
+
+for buchstabe in klartext:
+    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))
+print(umgewandelter_text)
+
+umgewandelter_text = np.array(umgewandelter_text)
+verschluesselte_zahl = (umgewandelter_text - 97 + versatz) % 26 + 97
+print(verschluesselte_zahl)
+
+for zahl in verschluesselte_zahl:    
+    verschluesselter_text.append(ascii_zu_buchstabe(zahl))
+print(verschluesselter_text)
+```
+
+:::
+
+:::
+
+::: {.callout-tip collapse="true"}
+
+## 4. Schreiben sie den Code so um, dass der verschlüsselte Text entschlüsselt wird.
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+```{python}
+import numpy as np
+
+# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt
+def buchstabe_zu_ascii(c):
+    return ord(c)
+
+# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt
+def ascii_zu_buchstabe(a):
+    return chr(a)
+
+
+versatz = 3
+
+umgewandelter_text = []
+verschluesselte_zahl = []
+entschluesselter_text= []
+
+
+
+for buchstabe in verschluesselter_text:
+    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))
+print(umgewandelter_text)
+
+umgewandelter_text = np.array(umgewandelter_text)
+verschluesselte_zahl = (umgewandelter_text - 97 - versatz) % 26 + 97
+print(verschluesselte_zahl)
+
+for zahl in verschluesselte_zahl:    
+    entschluesselter_text.append(ascii_zu_buchstabe(zahl))
+print(entschluesselter_text)
+```
+
+:::
+
+:::

@@ -1,0 +1,162 @@
+# Array Manipulation
+
+```{python}
+#| echo: false
+import numpy as np
+```
+
+## Changing the Shape
+
+Various functions allow us to change the shape and contents of arrays.
+
+One of the most important array operations is transposing. This operation switches rows with columns and vice versa.
+
+```{python}
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+print(matrix)
+```
+
+If we now transpose this array, we get:
+
+```{python}
+print(np.transpose(matrix))
+```
+
+If we have this matrix and want to turn it into a vector, we can use the `np.flatten()` function:
+
+```{python}
+vector = matrix.flatten()
+print(vector)
+```
+
+To return to a two-dimensional data structure, we use the function `np.reshape(target, shape)`:
+
+```{python}
+print(np.reshape(matrix, [3, 2]))
+```
+
+If we want to expand, shrink, or modify the content of an existing array, NumPy also provides suitable functions.
+
+If we have an empty array or want to add elements to an existing array, we use the `np.append()` function. This function appends a value to the existing array.
+
+```{python}
+array = np.array([1, 2, 3, 4, 5, 6])
+
+new_array = np.append(array, 7)
+print(new_array)
+```
+
+Sometimes we need to insert a value not at the end but at a specific position in the array. The appropriate tool here is the function `np.insert(array, position, insertion)`. In the following example, the number 7 is inserted at the third position.
+
+```{python}
+array = np.array([1, 2, 3, 4, 5, 6])
+
+new_array = np.insert(array, 3, 7)
+print(new_array)
+```
+
+Just like we can insert new elements, we can also delete elements. For this, we use the function `np.delete(array, position)`, which takes the array and the position of the element to delete.
+
+```{python}
+array = np.array([1, 2, 3, 4, 5, 6])
+
+new_array = np.delete(array, 3)
+print(new_array)
+```
+
+Lastly, let’s look at joining two arrays. In the following example, array `b` is appended to array `a` using the function `np.concatenate((array a, array b))`.
+
+```{python}
+a = np.array([1, 2, 3, 4, 5, 6])
+b = np.array([7, 8, 9, 10])
+
+new_array = np.concatenate((a, b))
+print(new_array)
+```
+
+## Sorting Arrays
+
+NumPy also provides the ability to sort arrays. In the following example, we start with an unsorted array. Using the `np.sort()` function, we obtain a sorted array.
+
+```{python}
+import numpy as np
+unsorted = np.array([4, 2, 1, 6, 3, 5])
+
+sorted_array = np.sort(unsorted)
+
+print(sorted_array)
+```
+
+## Sublists with Unique Values
+
+When working with data where, for example, projects are assigned employee IDs, there may be a finite number of employee IDs that appear multiple times if an employee works on several projects.
+
+If we want a list where each number appears only once, we can use the `np.unique` function.
+
+```{python}
+import numpy as np
+list_with_duplicates = np.array([4, 1, 1, 6, 3, 4, 7, 3, 3])
+
+unique_values = np.unique(list_with_duplicates)
+
+print(unique_values)
+```
+
+If we also set the option `return_counts=True`, a second variable will store how often each value occurs.
+
+```{python}
+import numpy as np
+list_with_duplicates = np.array([4, 1, 1, 6, 3, 4, 7, 3, 3])
+
+unique_values, counts = np.unique(list_with_duplicates, return_counts=True)
+
+print(counts)
+```
+
+::: {.callout-tip collapse="true"}
+
+## Mini Exercise: Array Manipulation
+
+Given the following two-dimensional array named `matrix`:
+
+```{python}
+matrix = np.array([
+    [4, 7, 2, 8],
+    [1, 5, 3, 6],
+    [9, 2, 4, 7]
+])
+```
+
+1. Change the shape of the array `matrix` into a one-dimensional array.
+2. Sort the one-dimensional array in ascending order.
+3. Change the shape of the sorted array into a two-dimensional array with 2 rows and 6 columns.
+4. Determine the unique elements in the original array `matrix` and print them.
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Solution
+
+```{python}
+matrix = np.array([
+    [4, 7, 2, 8],
+    [1, 5, 3, 6],
+    [9, 2, 4, 7]
+])
+
+# 1. Change to a one-dimensional array
+flat_array = matrix.flatten()
+
+# 2. Sort the one-dimensional array in ascending order
+sorted_array = np.sort(flat_array)
+
+# 3. Reshape the sorted array into a 2x6 array
+reshaped_array = sorted_array.reshape(2, 6)
+
+# 4. Find the unique elements in the original array
+unique_elements_original = np.unique(matrix)
+
+```
+
+:::
+
+:::
