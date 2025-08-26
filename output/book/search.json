@@ -54,7 +54,7 @@
     "href": "skript/introduction_en.html",
     "title": "1  Introduction to NumPy",
     "section": "",
-    "text": "1.1 Advantages & Disadvantages\nIn most cases, operations with NumPy data structures are faster. However, unlike native Python lists, NumPy arrays can only hold one data type per list.",
+    "text": "1.1 Advantages & Disadvantages\nNumPy is a powerful library for Python that is used for numerical computing and data analysis. The name “NumPy” is an acronym for “Numerical Python”.\nNumPy itself is mainly written in the C programming language, which is why NumPy is generally very fast.\nNumPy allows efficient work with small and large vectors and matrices that would otherwise be cumbersome to implement in native Python. It also provides the ability to perform calculations with vectors and matrices easily—even for very large datasets.\nThis introduction will help you understand and use the basics of NumPy.\nIn most cases, operations with NumPy data structures are faster. However, unlike native Python lists, NumPy arrays can only hold one data type per list.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to NumPy</span>"
     ]
@@ -214,7 +214,7 @@
     "href": "skript/array_read_n_write_en.html",
     "title": "7  Reading and Writing Files",
     "section": "",
-    "text": "7.1 Reading Files\nTo read structured text files, such as CSV (comma-separated values) files, the np.loadtxt() function can be used. It takes the filename to be read as its main argument, along with other options to define the data structure. The return value is a (multi-dimensional) array.\nIn the following example, the file TC01.csv is read and its contents are plotted. The first line of the file is ignored, as it is interpreted as a comment (starting with the # character).\nfilename = '01-daten/TC01.csv'\ndata = np.loadtxt(filename)\nprint(\"Data:\", data)\nprint(\"Shape:\", data.shape)\n\nData: [20.1 20.1 20.1 ... 24.3 24.2 24.2]\nShape: (1513,)\nplt.plot(data)\nplt.xlabel('Data Index')\nplt.ylabel('Temperature in °C');\nBy default, the np.loadtxt() function expects comma-separated values. If the data is separated by a different character, the delimiter = \"\" option can be used to specify a different delimiter. For example, if the separator is a semicolon, the function call would look like: np.loadtxt(data.txt, delimiter = \";\")\nIf the file starts with lines containing additional information such as units or experiment details, these can be skipped using the skiprows= #rows option.",
+    "text": "7.1 Reading Files\nThe numpy module provides functions for reading and writing structured text files.\nTo read structured text files, such as CSV (comma-separated values) files, the np.loadtxt() function can be used. It takes the filename to be read as its main argument, along with other options to define the data structure. The return value is a (multi-dimensional) array.\nIn the following example, the file TC01.csv is read and its contents are plotted. The first line of the file is ignored, as it is interpreted as a comment (starting with the # character).\nfilename = '01-daten/TC01.csv'\ndata = np.loadtxt(filename)\nprint(\"Data:\", data)\nprint(\"Shape:\", data.shape)\n\nData: [20.1 20.1 20.1 ... 24.3 24.2 24.2]\nShape: (1513,)\nplt.plot(data)\nplt.xlabel('Data Index')\nplt.ylabel('Temperature in °C');\nBy default, the np.loadtxt() function expects comma-separated values. If the data is separated by a different character, the delimiter = \"\" option can be used to specify a different delimiter. For example, if the separator is a semicolon, the function call would look like: np.loadtxt(data.txt, delimiter = \";\")\nIf the file starts with lines containing additional information such as units or experiment details, these can be skipped using the skiprows= #rows option.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Reading and Writing Files</span>"
     ]
@@ -244,7 +244,7 @@
     "href": "skript/assessment_en.html",
     "title": "9  Learning Objective Check",
     "section": "",
-    "text": "Task 1\nHow is the NumPy package typically imported?",
+    "text": "Task 1\nWelcome to the learning objective check!\nThis self-assessment is designed to help you review your understanding of the topics covered so far and to allow you to independently evaluate your learning progress. It is structured so that you can identify your strengths and weaknesses and work specifically on areas that still need improvement.\nYou have two options to test your knowledge. You can use the quiz, which will guide you automatically through the different topics. Alternatively, you will find standard questions below, similar to those used in the script so far.\nPlease take enough time to work through the questions calmly. Be honest with yourself and try to solve the tasks without any aids in order to get a realistic picture of your current level of knowledge. If you encounter difficulties with a question, it is an indication that you should practice more in that area.\nGood luck with the exercises and your continued learning!\nHow is the NumPy package typically imported?",
     "crumbs": [
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Learning Objective Check</span>"
     ]
