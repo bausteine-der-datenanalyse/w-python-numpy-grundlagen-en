@@ -1,3 +1,3 @@
-- Grundlagen Python
-- Einbinden von zusätzlichen Paketen
-- Plotten mit Matplotlib
+- Python Basics
+- Importing Additional Packages
+- Plotting with Matplotlib

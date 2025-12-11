@@ -1,6 +1,6 @@
-- Einleitung: was ist NumPy, Vor- und Nachteile
-- Nutzen des NumPy-Moduls
-- Erstellen von NumPy-Arrays
+- Introduction: What is NumPy, Advantages and Disadvantages
+- Benefits of the NumPy Module
+- Creating NumPy Arrays
 - Slicing
-- Lesen und schreiben von Dateien
-- Arbeiten mit Bildern
+- Reading and Writing Files
+- Working with Images
