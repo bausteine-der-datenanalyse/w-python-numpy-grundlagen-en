@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Übung – w-python-numpy-grundlagen</title>
+<title>10&nbsp; Exercise – w-python-numpy-grundlagen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-e0b6cb0f66c6c3f8d27641e5d4bcc9c8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -148,7 +148,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../uebungen/uebung.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Übung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../uebungen/uebung.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exercise</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -244,7 +244,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../uebungen/uebung.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Übung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exercise</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -263,8 +263,8 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#aufgabe-1-filmdatenbank" id="toc-aufgabe-1-filmdatenbank" class="nav-link active" data-scroll-target="#aufgabe-1-filmdatenbank"><span class="header-section-number">10.1</span> Aufgabe 1 Filmdatenbank</a></li>
-  <li><a href="#aufgabe-2---kryptographie---caesar-chiffre" id="toc-aufgabe-2---kryptographie---caesar-chiffre" class="nav-link" data-scroll-target="#aufgabe-2---kryptographie---caesar-chiffre"><span class="header-section-number">10.2</span> Aufgabe 2 - Kryptographie - Caesar-Chiffre</a></li>
+  <li><a href="#task-1-movie-database" id="toc-task-1-movie-database" class="nav-link active" data-scroll-target="#task-1-movie-database"><span class="header-section-number">10.1</span> Task 1: Movie Database</a></li>
+  <li><a href="#exercise-2---cryptography---caesar-cipher" id="toc-exercise-2---cryptography---caesar-cipher" class="nav-link" data-scroll-target="#exercise-2---cryptography---caesar-cipher"><span class="header-section-number">10.2</span> Exercise 2 - Cryptography - Caesar Cipher</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen/blob/main/uebungen/uebung.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
@@ -273,7 +273,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Übung</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Exercise</span></h1>
 </div>
 
 
@@ -290,19 +290,21 @@ window.Quarto = {
 </header>
 
 
-<section id="aufgabe-1-filmdatenbank" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="aufgabe-1-filmdatenbank"><span class="header-section-number">10.1</span> Aufgabe 1 Filmdatenbank</h2>
-<p>In der ersten Aufgabe wollen wir fiktive Daten für Filmbewertungen untersuchen. Das Datenset ist dabei vereinfacht und beinhaltet folgende Spalten:</p>
+<section id="task-1-movie-database" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="task-1-movie-database"><span class="header-section-number">10.1</span> Task 1: Movie Database</h2>
+<p>In the first task, we want to analyze fictional data for movie ratings. The dataset is simplified and contains the following columns:</p>
 <ol type="1">
-<li>Film ID</li>
-<li>Benutzer ID</li>
-<li>Bewertung</li>
+<li>Movie ID<br>
+</li>
+<li>User ID<br>
+</li>
+<li>Rating</li>
 </ol>
-<p>Hier ist das Datenset:</p>
-<div id="49302cc7" class="cell" data-execution_count="1">
+<p>Here is the dataset:</p>
+<div id="9d547e21" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>bewertungen <span class="op">=</span> np.array([</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ratings <span class="op">=</span> np.array([</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">101</span>, <span class="fl">4.5</span>],</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">1</span>, <span class="dv">102</span>, <span class="fl">3.0</span>],</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>, <span class="dv">101</span>, <span class="fl">2.5</span>],</span>
@@ -318,7 +320,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>a) Bestimmen Sie die jemals niedrigste und höchste Bewertung, die je gegeben wurde
+<span class="screen-reader-only">Tip</span>a) Determine the lowest and highest rating ever given
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -328,23 +330,23 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="57e2ab06" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>niedrigste_bewertung <span class="op">=</span> np.<span class="bu">min</span>(bewertungen[:,<span class="dv">2</span>])</span>
+<div id="2c987595" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lowest_rating <span class="op">=</span> np.<span class="bu">min</span>(ratings[:, <span class="dv">2</span>])</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Die niedrigste jemals gegebene Bertung ist:"</span>, niedrigste_bewertung)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The lowest rating ever given is:"</span>, lowest_rating)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>hoechste_bewertung <span class="op">=</span> np.<span class="bu">max</span>(bewertungen[:,<span class="dv">2</span>])</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>highest_rating <span class="op">=</span> np.<span class="bu">max</span>(ratings[:, <span class="dv">2</span>])</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Die hoechste jemals gegebene Bertung ist:"</span>, hoechste_bewertung)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The highest rating ever given is:"</span>, highest_rating)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Die niedrigste jemals gegebene Bertung ist: 2.5
-Die hoechste jemals gegebene Bertung ist: 5.0</code></pre>
+<pre><code>The lowest rating ever given is: 2.5
+The highest rating ever given is: 5.0</code></pre>
 </div>
 </div>
 </div>
@@ -359,7 +361,7 @@ Die hoechste jemals gegebene Bertung ist: 5.0</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>b) Nennen Sie alle Bewertungen für Film 1
+<span class="screen-reader-only">Tip</span>b) List all ratings for movie 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -369,18 +371,18 @@ Die hoechste jemals gegebene Bertung ist: 5.0</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="486804e9" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bewertungen_film_1 <span class="op">=</span> bewertungen[np.where(bewertungen[:,<span class="dv">0</span>]<span class="op">==</span><span class="dv">1</span>)]</span>
+<div id="08e74af7" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ratings_movie_1 <span class="op">=</span> ratings[np.where(ratings[:, <span class="dv">0</span>] <span class="op">==</span> <span class="dv">1</span>)]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bewertungen für Film 1:</span><span class="ch">\n</span><span class="st">"</span>, bewertungen_film_1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ratings for movie 1:</span><span class="ch">\n</span><span class="st">"</span>, ratings_movie_1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Bewertungen für Film 1:
+<pre><code>Ratings for movie 1:
  [[  1.  101.    4.5]
  [  1.  102.    3. ]]</code></pre>
 </div>
@@ -397,7 +399,7 @@ Die hoechste jemals gegebene Bertung ist: 5.0</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>c) Nennen Sie alle Bewertungen von Person 101
+<span class="screen-reader-only">Tip</span>c) List all ratings of person 101
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -407,18 +409,18 @@ Die hoechste jemals gegebene Bertung ist: 5.0</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="b96ceb77" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bewertungen_101 <span class="op">=</span> bewertungen[np.where(bewertungen[:,<span class="dv">1</span>]<span class="op">==</span><span class="dv">101</span>)]</span>
+<div id="6bea3649" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ratings_101 <span class="op">=</span> ratings[np.where(ratings[:,<span class="dv">1</span>]<span class="op">==</span><span class="dv">101</span>)]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bewertungen von Person 101:</span><span class="ch">\n</span><span class="st">"</span>, bewertungen_101)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ratings of person 101:</span><span class="ch">\n</span><span class="st">"</span>, ratings_101)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Bewertungen von Person 101:
+<pre><code>Ratings of person 101:
  [[  1.  101.    4.5]
  [  2.  101.    2.5]
  [  3.  101.    5. ]]</code></pre>
@@ -436,7 +438,7 @@ Die hoechste jemals gegebene Bertung ist: 5.0</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>d) Berechnen Sie die mittlere Bewertung für jeden Film und geben Sie diese nacheinander aus
+<span class="screen-reader-only">Tip</span>d) Calculate the average rating for each movie and print them one by one
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -446,22 +448,22 @@ Die hoechste jemals gegebene Bertung ist: 5.0</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="29cb2b24" class="cell" data-execution_count="5">
+<div id="be409660" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ID <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]:</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    mittelwert <span class="op">=</span> np.mean(bewertungen[np.where(bewertungen[:,<span class="dv">0</span>]<span class="op">==</span>ID),<span class="dv">2</span>])</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    average <span class="op">=</span> np.mean(ratings[np.where(ratings[:,<span class="dv">0</span>]<span class="op">==</span>ID),<span class="dv">2</span>])</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Die Mittlere Bewertung für Film"</span>, ID, <span class="st">"beträgt:"</span>, mittelwert) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The average rating for movie"</span>, ID, <span class="st">"is:"</span>, average) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Die Mittlere Bewertung für Film 1 beträgt: 3.75
-Die Mittlere Bewertung für Film 2 beträgt: 3.25
-Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
+<pre><code>The average rating for movie 1 is: 3.75
+The average rating for movie 2 is: 3.25
+The average rating for movie 3 is: 4.166666666666667</code></pre>
 </div>
 </div>
 </div>
@@ -476,7 +478,7 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>e) Finden SIe den Film mit der höchsten Bewertung
+<span class="screen-reader-only">Tip</span>e) Find the Movie with the Highest Rating
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -486,16 +488,16 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="67b8799a" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>index_hoechste_bewertung <span class="op">=</span> np.argmax(bewertungen[:,<span class="dv">2</span>])</span>
+<div id="6d44a540" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>index_highest_rating <span class="op">=</span> np.argmax(ratings[:,<span class="dv">2</span>])</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bewertungen[index_hoechste_bewertung,:])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ratings[index_highest_rating,:])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[  3. 101.   5.]</code></pre>
 </div>
@@ -512,7 +514,7 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>f) Finden Sie die Person mit den meisten Bewertungen
+<span class="screen-reader-only">Tip</span>f) Find the Person with the Most Reviews
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -522,20 +524,20 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="640b4498" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>einzigartige_person, anzahl <span class="op">=</span> np.unique(bewertungen[:, <span class="dv">1</span>],return_counts<span class="op">=</span><span class="va">True</span>)</span>
+<div id="04a21fb6" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>unique_persons, counts <span class="op">=</span> np.unique(ratings[:, <span class="dv">1</span>], return_counts<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>meist_aktiver_person <span class="op">=</span> einzigartige_person[np.argmax(anzahl)]</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>most_active_person <span class="op">=</span> unique_persons[np.argmax(counts)]</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Personen mit den meisten Bewertungen:"</span>, meist_aktiver_person)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Person with the most reviews:"</span>, most_active_person)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Personen mit den meisten Bewertungen: 101.0</code></pre>
+<pre><code>Person with the most reviews: 101.0</code></pre>
 </div>
 </div>
 </div>
@@ -550,7 +552,7 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>g) Nennen Sie alle Filme mit einer Wertung von 4 oder besser.
+<span class="screen-reader-only">Tip</span>g) List all movies with a rating of 4 or higher.
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -560,20 +562,20 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="6e691b1d" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>index_bewertung_besser_vier <span class="op">=</span> bewertungen[:,<span class="dv">2</span>] <span class="op">&gt;=</span> <span class="dv">4</span></span>
+<div id="fc98e531" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>index_rating_four_or_higher <span class="op">=</span> ratings[:,<span class="dv">2</span>] <span class="op">&gt;=</span> <span class="dv">4</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Filme mit einer Wertung von 4 oder besser:"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Movies with a rating of 4 or higher:"</span>)</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bewertungen[index_bewertung_besser_vier,:])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ratings[index_rating_four_or_higher, :])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Filme mit einer Wertung von 4 oder besser:
+<pre><code>Movies with a rating of 4 or higher:
 [[  1.  101.    4.5]
  [  2.  103.    4. ]
  [  3.  101.    5. ]
@@ -592,7 +594,7 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>h) Film Nr. 4 ist erschienen. Der Film wurde von Person 102 mit einer Note von 3.5 bewertet. Fügen Sie diesen zur Datenbank hinzu.
+<span class="screen-reader-only">Tip</span>h) Movie No.&nbsp;4 has been released. The movie was rated 3.5 by person 102. Add this to the database.
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -602,18 +604,18 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="ca7b8c88" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>neue_bewertung <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">102</span>, <span class="fl">3.5</span>])</span>
+<div id="aef8e8b4" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>new_rating <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">102</span>, <span class="fl">3.5</span>])</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>bewertungen <span class="op">=</span> np.append(bewertungen, [neue_bewertung], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>ratings <span class="op">=</span> np.append(ratings, [new_rating], axis<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(bewertungen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ratings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[  1.  101.    4.5]
  [  1.  102.    3. ]
@@ -637,7 +639,7 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>i) Person 102 hat sich Film Nr. 1 nochmal angesehen und hat das Ende jetzt doch verstanden. Dementsprechend soll die Berwertung jetzt auf 5.0 geändert werden.
+<span class="screen-reader-only">Tip</span>i) Person 102 re-watched Movie No.&nbsp;1 and now understands the ending. Accordingly, the rating should be updated to 5.0.
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -647,19 +649,19 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="63b33abb" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>bewertungen[(bewertungen[:, <span class="dv">0</span>] <span class="op">==</span> <span class="dv">1</span>) <span class="op">&amp;</span> </span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>            (bewertungen[:, <span class="dv">1</span>] <span class="op">==</span> <span class="dv">102</span>), <span class="dv">2</span>] <span class="op">=</span> <span class="fl">5.0</span></span>
+<div id="94c16bfe" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>ratings[(ratings[:, <span class="dv">0</span>] <span class="op">==</span> <span class="dv">1</span>) <span class="op">&amp;</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>        (ratings[:, <span class="dv">1</span>] <span class="op">==</span> <span class="dv">102</span>), <span class="dv">2</span>] <span class="op">=</span> <span class="fl">5.0</span></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Aktualisieren der Bewertung:</span><span class="ch">\n</span><span class="st">"</span>, bewertungen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Updating the rating:</span><span class="ch">\n</span><span class="st">"</span>, ratings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Aktualisieren der Bewertung:
+<pre><code>Updating the rating:
  [[  1.  101.    4.5]
  [  1.  102.    5. ]
  [  2.  101.    2.5]
@@ -676,19 +678,19 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 </div>
 </div>
 </section>
-<section id="aufgabe-2---kryptographie---caesar-chiffre" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="aufgabe-2---kryptographie---caesar-chiffre"><span class="header-section-number">10.2</span> Aufgabe 2 - Kryptographie - Caesar-Chiffre</h2>
-<p>In dieser Aufgabe wollen wir Text sowohl ver- als auch entschlüsseln.</p>
-<p>Jedes Zeichen hat über die sogenannte ASCII-Tabelle einen Zahlenwert zugeordnet.</p>
+<section id="exercise-2---cryptography---caesar-cipher" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="exercise-2---cryptography---caesar-cipher"><span class="header-section-number">10.2</span> Exercise 2 - Cryptography - Caesar Cipher</h2>
+<p>In this exercise, we want to both encrypt and decrypt text.</p>
+<p>Each character is assigned a numerical value via the so-called ASCII table.</p>
 <div id="tbl-ascii" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <div aria-describedby="tbl-ascii-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table-striped table-hover table">
 <thead>
 <tr class="header">
-<th>Buchstabe</th>
+<th>Letter</th>
 <th>ASCII Code</th>
-<th>Buchstabe</th>
+<th>Letter</th>
 <th>ASCII Code</th>
 </tr>
 </thead>
@@ -775,22 +777,22 @@ Die Mittlere Bewertung für Film 3 beträgt: 4.166666666666667</code></pre>
 </table>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-ascii-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;10.1: Ascii-Tabelle
+Table&nbsp;10.1: ASCII Table
 </figcaption>
 </figure>
 </div>
-<p>Der Einfachheit halber ist im Folgenden schon der Code zur Umwandlung von Buchstaben in Zahlenwerten und wieder zurück aufgeführt. Außerdem beschränken wir uns auf Texte mit kleinen Buchstaben.</p>
-<p>Ihre Aufgabe ist nun die Zahlenwerte zu verändern.</p>
-<p>Zunächste wollen wir eine einfache Caesar-Chiffre anwenden. Dabei werden alle Buchstaben um eine gewisse Anzahl verschoben. Ist Beispielsweise der der Verschlüsselungswert “1” wird aus einem A ein B, einem M, ein N. Ist der Wert “4” wird aus einem A ein E und aus einem M ein Q. Die Verschiebung findet zyklisch statt, das heißt bei einer Verschiebung von 1 wird aus einem Z ein A.</p>
-<div id="56db4e9a" class="cell" data-execution_count="11">
+<p>For simplicity, the following code for converting letters to numeric values and back is already provided. We will also limit ourselves to texts with lowercase letters.</p>
+<p>Your task is now to modify the numeric values.</p>
+<p>First, we want to apply a simple Caesar cipher. In this cipher, all letters are shifted by a certain number of positions. For example, if the shift value is “1”, an ‘a’ becomes ‘b’, ‘m’ becomes ‘n’, and so on. If the shift value is “4”, an ‘a’ becomes ‘e’ and ‘m’ becomes ‘q’. The shift is cyclic, meaning that with a shift of 1, ‘z’ becomes ‘a’.</p>
+<div id="5fd0c9d7" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> buchstabe_zu_ascii(c):</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Function that converts a letter to its ASCII value</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> letter_to_ascii(c):</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([<span class="bu">ord</span>(c)])</span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt</span></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ascii_zu_buchstabe(a):</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Function that converts an ASCII value to the corresponding letter</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ascii_to_letter(a):</span>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">chr</span>(a)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -799,7 +801,7 @@ Table&nbsp;10.1: Ascii-Tabelle
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>1. Überlegen Sie sich zunächst wie man diese zyklische Verschiebung mathematisch ausdrücken könnte (Hinweis: Modulo Rechnung)
+<span class="screen-reader-only">Tip</span>1. First, think about how to express this cyclic shift mathematically (Hint: modulo calculation)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -811,13 +813,13 @@ Table&nbsp;10.1: Ascii-Tabelle
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[ \textrm{ASCII}_{\textrm{verschoben}} = (\textrm{ASCII} - 97 + \textrm{Versatz}) \textrm{ mod } 26 + 97\]</span></p>
+<p><span class="math display">\[ \textrm{ASCII}_{\textrm{shifted}} = (\textrm{ASCII} - 97 + \textrm{Shift}) \textrm{ mod } 26 + 97\]</span></p>
 </div>
 </div>
 </div>
@@ -830,59 +832,58 @@ Table&nbsp;10.1: Ascii-Tabelle
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>2. Schreiben Sie Code der mit einer Schleife alle Zeichen umwandelt.
+<span class="screen-reader-only">Tip</span>2. Write code that converts all characters using a loop.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Zunächst sollen alle Zeichen in Ascii Code umgewandelt werden. Dann wird die Formel auf die Zahlenwerte angewendet und schlussendlich in einer dritten schleife wieder alle Werte in Buchstaben übersetzt.</p>
+<p>First, all characters should be converted to ASCII codes. Then, the formula is applied to the numeric values, and finally, in a third loop, all values are converted back to letters.</p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="eed6d3e6" class="cell" data-execution_count="12">
+<div id="1451b7de" class="cell" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> buchstabe_zu_ascii(c):</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Function that converts a letter to its ASCII value</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> letter_to_ascii(c):</span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">ord</span>(c)</span>
 <span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ascii_zu_buchstabe(a):</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Function that converts an ASCII value back to the corresponding letter</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ascii_to_letter(a):</span>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">chr</span>(a)</span>
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>klartext <span class="op">=</span> <span class="st">"abrakadabra"</span></span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>versatz <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>plaintext <span class="op">=</span> <span class="st">"abrakadabra"</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>shift <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>umgewandelter_text <span class="op">=</span> []</span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>verschluesselte_zahl <span class="op">=</span> []</span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>verschluesselter_text<span class="op">=</span> []</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>converted_text <span class="op">=</span> []</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>shifted_numbers <span class="op">=</span> []</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>encrypted_text <span class="op">=</span> []</span>
 <span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> buchstabe <span class="kw">in</span> klartext:</span>
-<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))</span>
-<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(umgewandelter_text)</span>
-<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zahl <span class="kw">in</span> umgewandelter_text:    </span>
-<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>    verschluesselt <span class="op">=</span> (zahl <span class="op">-</span> <span class="dv">97</span> <span class="op">+</span> versatz) <span class="op">%</span> <span class="dv">26</span> <span class="op">+</span> <span class="dv">97</span></span>
-<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>    verschluesselte_zahl.append(verschluesselt)</span>
-<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verschluesselte_zahl)</span>
-<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zahl <span class="kw">in</span> verschluesselte_zahl:    </span>
-<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>    verschluesselter_text.append(ascii_zu_buchstabe(zahl))</span>
-<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verschluesselter_text)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert letters to ASCII</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> plaintext:</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>    converted_text.append(letter_to_ascii(letter))</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(converted_text)</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply shift formula</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> converted_text:    </span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>    shifted <span class="op">=</span> (number <span class="op">-</span> <span class="dv">97</span> <span class="op">+</span> shift) <span class="op">%</span> <span class="dv">26</span> <span class="op">+</span> <span class="dv">97</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>    shifted_numbers.append(shifted)</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(shifted_numbers)</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert ASCII back to letters</span></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> shifted_numbers:    </span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>    encrypted_text.append(ascii_to_letter(number))</span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(encrypted_text)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[97, 98, 114, 97, 107, 97, 100, 97, 98, 114, 97]
 [100, 101, 117, 100, 110, 100, 103, 100, 101, 117, 100]
@@ -901,7 +902,7 @@ Table&nbsp;10.1: Ascii-Tabelle
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>3. Ersetzen Sie die Schleife, indem Sie die Rechenoperation mit einem NumPy-Array durchführen
+<span class="screen-reader-only">Tip</span>3. Replace the Loop by Performing the Calculation with a NumPy Array
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -913,43 +914,44 @@ Table&nbsp;10.1: Ascii-Tabelle
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="9c895ec9" class="cell" data-execution_count="13">
+<div id="ad11cecc" class="cell" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> buchstabe_zu_ascii(c):</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Function that converts a letter to its ASCII value</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> letter_to_ascii(c):</span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">ord</span>(c)</span>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ascii_zu_buchstabe(a):</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Function that converts an ASCII value back to the corresponding letter</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ascii_to_letter(a):</span>
 <span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">chr</span>(a)</span>
 <span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>klartext <span class="op">=</span> <span class="st">"abrakadabra"</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>versatz <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>plaintext <span class="op">=</span> <span class="st">"abrakadabra"</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>shift <span class="op">=</span> <span class="dv">3</span></span>
 <span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>umgewandelter_text <span class="op">=</span> []</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>verschluesselte_zahl <span class="op">=</span> []</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>verschluesselter_text<span class="op">=</span> []</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>converted_text <span class="op">=</span> []</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>encrypted_numbers <span class="op">=</span> []</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>encrypted_text <span class="op">=</span> []</span>
 <span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> buchstabe <span class="kw">in</span> klartext:</span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))</span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(umgewandelter_text)</span>
-<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>umgewandelter_text <span class="op">=</span> np.array(umgewandelter_text)</span>
-<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>verschluesselte_zahl <span class="op">=</span> (umgewandelter_text <span class="op">-</span> <span class="dv">97</span> <span class="op">+</span> versatz) <span class="op">%</span> <span class="dv">26</span> <span class="op">+</span> <span class="dv">97</span></span>
-<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verschluesselte_zahl)</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert each letter to its ASCII value</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> plaintext:</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    converted_text.append(letter_to_ascii(letter))</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(converted_text)</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert list to NumPy array and apply the Caesar cipher shift</span></span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>converted_text <span class="op">=</span> np.array(converted_text)</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a>encrypted_numbers <span class="op">=</span> (converted_text <span class="op">-</span> <span class="dv">97</span> <span class="op">+</span> shift) <span class="op">%</span> <span class="dv">26</span> <span class="op">+</span> <span class="dv">97</span></span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(encrypted_numbers)</span>
 <span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zahl <span class="kw">in</span> verschluesselte_zahl:    </span>
-<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a>    verschluesselter_text.append(ascii_zu_buchstabe(zahl))</span>
-<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verschluesselter_text)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert encrypted ASCII values back to letters</span></span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> encrypted_numbers:    </span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a>    encrypted_text.append(ascii_to_letter(number))</span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(encrypted_text)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[97, 98, 114, 97, 107, 97, 100, 97, 98, 114, 97]
 [100 101 117 100 110 100 103 100 101 117 100]
@@ -968,7 +970,7 @@ Table&nbsp;10.1: Ascii-Tabelle
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>4. Schreiben sie den Code so um, dass der verschlüsselte Text entschlüsselt wird.
+<span class="screen-reader-only">Tip</span>4. Rewrite the code so that the encrypted text is decrypted.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -980,43 +982,40 @@ Table&nbsp;10.1: Ascii-Tabelle
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Caution</span>Lösung
+<span class="screen-reader-only">Caution</span>Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="92a857a9" class="cell" data-execution_count="14">
+<div id="9ec6a0be" class="cell" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> buchstabe_zu_ascii(c):</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Function that converts a letter to its ASCII value</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> letter_to_ascii(c):</span>
 <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">ord</span>(c)</span>
 <span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ascii_zu_buchstabe(a):</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Function that converts an ASCII value back to the corresponding letter</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ascii_to_letter(a):</span>
 <span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">chr</span>(a)</span>
 <span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>versatz <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>umgewandelter_text <span class="op">=</span> []</span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>verschluesselte_zahl <span class="op">=</span> []</span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>entschluesselter_text<span class="op">=</span> []</span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> buchstabe <span class="kw">in</span> verschluesselter_text:</span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))</span>
-<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(umgewandelter_text)</span>
-<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>umgewandelter_text <span class="op">=</span> np.array(umgewandelter_text)</span>
-<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>verschluesselte_zahl <span class="op">=</span> (umgewandelter_text <span class="op">-</span> <span class="dv">97</span> <span class="op">-</span> versatz) <span class="op">%</span> <span class="dv">26</span> <span class="op">+</span> <span class="dv">97</span></span>
-<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(verschluesselte_zahl)</span>
-<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zahl <span class="kw">in</span> verschluesselte_zahl:    </span>
-<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>    entschluesselter_text.append(ascii_zu_buchstabe(zahl))</span>
-<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(entschluesselter_text)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>shift <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>converted_text <span class="op">=</span> []</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>encrypted_numbers <span class="op">=</span> []</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>decrypted_text <span class="op">=</span> []</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> encrypted_text:</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    converted_text.append(letter_to_ascii(letter))</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(converted_text)</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>converted_text <span class="op">=</span> np.array(converted_text)</span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>encrypted_numbers <span class="op">=</span> (converted_text <span class="op">-</span> <span class="dv">97</span> <span class="op">-</span> shift) <span class="op">%</span> <span class="dv">26</span> <span class="op">+</span> <span class="dv">97</span></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(encrypted_numbers)</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> encrypted_numbers:    </span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>    decrypted_text.append(ascii_to_letter(number))</span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(decrypted_text)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[100, 101, 117, 100, 110, 100, 103, 100, 101, 117, 100]
 [ 97  98 114  97 107  97 100  97  98 114  97]
