@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,7 +13,7 @@
 <meta name="author" content="Marc Fehr">
 <meta name="author" content="Maik Poetzsch">
 <meta name="author" content="Sebastian Seipel">
-<meta name="dcterms.date" content="2026-01-16">
+<meta name="dcterms.date" content="2026-03-03">
 
 <title>w-python-numpy-grundlagen</title>
 <style>
@@ -42,15 +42,14 @@ ul.task-list li input[type="checkbox"] {
 <link href="./skript/00-bilder/favicon_bcd_new.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e0b6cb0f66c6c3f8d27641e5d4bcc9c8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7e97565b392f382fb7bad5e5f7d3a376.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -106,8 +105,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./skript/00-bilder/logo_bcd_new.svg" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./skript/00-bilder/logo_bcd_new.svg" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="./skript/00-bilder/logo_bcd_new.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Werkzeugbaustein Grundlagen NumPy</a> 
@@ -209,14 +207,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#preamble" id="toc-preamble" class="nav-link active" data-scroll-target="#preamble">Preamble</a></li>
   <li><a href="#intro" id="toc-intro" class="nav-link" data-scroll-target="#intro">Intro</a>
   <ul class="collapse">
-  <li><a href="#voraussetzungen" id="toc-voraussetzungen" class="nav-link" data-scroll-target="#voraussetzungen">Voraussetzungen</a></li>
-  <li><a href="#verwendete-pakete-und-datensätze" id="toc-verwendete-pakete-und-datensätze" class="nav-link" data-scroll-target="#verwendete-pakete-und-datensätze">Verwendete Pakete und Datensätze</a>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#used-packages-and-datasets" id="toc-used-packages-and-datasets" class="nav-link" data-scroll-target="#used-packages-and-datasets">Used Packages and Datasets</a>
   <ul class="collapse">
-  <li><a href="#pakete" id="toc-pakete" class="nav-link" data-scroll-target="#pakete">Pakete</a></li>
-  <li><a href="#datensätze" id="toc-datensätze" class="nav-link" data-scroll-target="#datensätze">Datensätze</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets">Datasets</a></li>
   </ul></li>
-  <li><a href="#bearbeitungszeit" id="toc-bearbeitungszeit" class="nav-link" data-scroll-target="#bearbeitungszeit">Bearbeitungszeit</a></li>
-  <li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele">Lernziele</a></li>
+  <li><a href="#estimated-working-time" id="toc-estimated-working-time" class="nav-link" data-scroll-target="#estimated-working-time">Estimated Working Time</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
@@ -249,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 16, 2026</p>
+      <p class="date">March 3, 2026</p>
     </div>
   </div>
   
@@ -263,61 +261,62 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="preamble" class="level1 unnumbered">
 <h1 class="unnumbered">Preamble</h1>
-<div id="Lizenz" class="border">
+<div id="License" class="border">
 <div class="quarto-layout-panel" data-layout="[20, 80]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
-<p><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png" class="img-fluid" alt="Symbol des Lizenzhinweises Creative Commons BY"></p>
+<p><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png" class="img-fluid" alt="Symbol of the Creative Commons BY license notice"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
-<p>Bausteine Computergestützter Datenanalyse. “Numpy Grundlagen” von Lukas Arnold, Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch und Sebastian Seipel ist lizensiert unter <a href="https://creativecommons.org/licenses/by/4.0/deed.de">CC BY 4.0</a>. Das Werk ist abrufbar unter <a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen" class="uri">https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen</a>. Ausgenommen von der Lizenz sind alle Logos und anders gekennzeichneten Inhalte. 2024</p>
+<p>Building Blocks of Computer-Assisted Data Analysis. “NumPy Fundamentals” by Lukas Arnold, Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch and Sebastian Seipel is licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>. The work is available at <a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen" class="uri">https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen</a>. Excluded from the license are all logos and other content marked otherwise. 2024</p>
 </div>
 </div>
 </div>
-<p>Zitiervorschlag</p>
-<p>Arnold, Lukas, Simone Arnold, Matthias Baitsch, Marc Fehr, Maik Poetzsch, und Sebastian Seipel. 2024. „Bausteine Computergestützter Datenanalyse. Werkzeugbaustein NumPy“. <a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen" class="uri">https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen</a>.</p>
-<p>BibTeX-Vorlage</p>
+<p>Suggested Citation</p>
+<p>Arnold, Lukas, Simone Arnold, Matthias Baitsch, Marc Fehr, Maik Poetzsch, and Sebastian Seipel. 2024. “Building Blocks of Computer-Assisted Data Analysis. Tool Module NumPy”. <a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen" class="uri">https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen</a>.</p>
+<p>BibTeX Template</p>
 <pre><code>@misc{BCD-Styleguide-2024,
- title={Bausteine Computergestützter Datenanalyse. Werkzeugbaustein NumPy},
- author={Arnold, Lukas and Arnold, Simone and Baitsch, Matthias and Fehr, Marc and Poetzsch, Maik and Seipel, Sebastian},
- year={2024},
- url={https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen}} </code></pre>
+  title        = {Building Blocks of Computer-Aided Data Analysis. NumPy Toolkit Module},
+  author       = {Arnold, Lukas and Arnold, Simone and Baitsch, Matthias and Fehr, Marc and Poetzsch, Maik and Seipel, Sebastian},
+  year         = {2024},
+  url          = {https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen}
+}</code></pre>
 </div>
 </section>
 <section id="intro" class="level1">
 <h1>Intro</h1>
-<section id="voraussetzungen" class="level2">
-<h2 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h2>
+<section id="prerequisites" class="level2">
+<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
 <ul>
 <li>Python Basics</li>
 <li>Importing Additional Packages</li>
 <li>Plotting with Matplotlib</li>
 </ul>
 </section>
-<section id="verwendete-pakete-und-datensätze" class="level2">
-<h2 class="anchored" data-anchor-id="verwendete-pakete-und-datensätze">Verwendete Pakete und Datensätze</h2>
-<section id="pakete" class="level3">
-<h3 class="anchored" data-anchor-id="pakete">Pakete</h3>
+<section id="used-packages-and-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="used-packages-and-datasets">Used Packages and Datasets</h2>
+<section id="packages" class="level3">
+<h3 class="anchored" data-anchor-id="packages">Packages</h3>
 <ul>
 <li><a href="https://numpy.org/">NumPy</a></li>
 <li><a href="https://matplotlib.org/">Matplotlib</a></li>
 </ul>
 </section>
-<section id="datensätze" class="level3">
-<h3 class="anchored" data-anchor-id="datensätze">Datensätze</h3>
+<section id="datasets" class="level3">
+<h3 class="anchored" data-anchor-id="datasets">Datasets</h3>
 <ul>
 <li><a href="https://firedynamics.github.io/LectureComputerScience/_downloads/0d1a3bfbc82fa134e08585d6151e9f46/TC01.csv">TC01.csv</a></li>
-<li><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg">Bild: Mona Lisa</a></li>
-<li><a href="https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg">Bild: Campus</a></li>
+<li><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg">Image: Mona Lisa</a></li>
+<li><a href="https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg">Image: Campus</a></li>
 </ul>
 </section>
 </section>
-<section id="bearbeitungszeit" class="level2">
-<h2 class="anchored" data-anchor-id="bearbeitungszeit">Bearbeitungszeit</h2>
-<p>Geschätzte Bearbeitungszeit: 2h</p>
+<section id="estimated-working-time" class="level2">
+<h2 class="anchored" data-anchor-id="estimated-working-time">Estimated Working Time</h2>
+<p>Estimated working time: 2h</p>
 </section>
-<section id="lernziele" class="level2">
-<h2 class="anchored" data-anchor-id="lernziele">Lernziele</h2>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <ul>
 <li>Introduction: What is NumPy, Advantages and Disadvantages</li>
 <li>Benefits of the NumPy Module</li>
@@ -383,14 +382,13 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
