@@ -30,7 +30,7 @@ plt.xlabel('Data Index')
 plt.ylabel('Temperature in °C');
 ```
 
-By default, the `np.loadtxt()` function expects comma-separated values. If the data is separated by a different character, the `delimiter = ""` option can be used to specify a different delimiter. For example, if the separator is a semicolon, the function call would look like:
+By default, the `np.loadtxt()` function expects whitespace-separated values. If the data is separated by a different character, the `delimiter = ""` option can be used to specify a different delimiter. For example, if the separator is a semicolon, the function call would look like:
 `np.loadtxt(data.txt, delimiter = ";")`
 
 If the file starts with lines containing additional information such as units or experiment details, these can be skipped using the `skiprows= #rows` option.
