@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "w-python-numpy-grundlagen"
+  title: "Building Blocks of Computer-Assisted Data Analysis"
   author:
     - Lukas Arnold
     - Simone Arnold
@@ -12,13 +12,13 @@ book:
     - Maik Poetzsch
     - Sebastian Seipel
   date: today
-  language: en_EN
+  language: en-US
   downloads: [pdf]
-  repo-url: "https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen"
+  repo-url: "https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen-en"
   repo-actions: [source]
   favicon: "skript/00-bilder/favicon_bcd_new.svg"
   sidebar:
-    title: "Werkzeugbaustein Grundlagen NumPy"
+    title: "Tool Module NumPy Fundamentals"
     logo: "skript/00-bilder/logo_bcd_new.svg"
 
 bibliography: skript/references.bib
