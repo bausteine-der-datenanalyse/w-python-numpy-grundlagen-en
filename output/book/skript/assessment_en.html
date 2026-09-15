@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" class="h5p-iframe"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Learning Objective Check – w-python-numpy-grundlagen</title>
+<title>9&nbsp; Learning Objective Check – Building Blocks of Computer-Assisted Data Analysis</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -70,15 +76,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../skript/00-bilder/favicon_bcd_new.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ad5600523237e9d3ac611eee113f0366.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3a79c8b4f024afbc6085355c069670f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -138,10 +143,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="../skript/00-bilder/logo_bcd_new.svg" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Werkzeugbaustein Grundlagen NumPy</a> 
+      <a href="../">Tool Module NumPy Fundamentals</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="../w-python-numpy-grundlagen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen-en" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="../Building-Blocks-of-Computer-Assisted-Data-Analysis.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -245,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#task-9" id="toc-task-9" class="nav-link" data-scroll-target="#task-9">Task 9</a></li>
   <li><a href="#task-10" id="toc-task-10" class="nav-link" data-scroll-target="#task-10">Task 10</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen/blob/main/skript/assessment_en.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen-en/blob/main/skript/assessment_en.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -352,8 +357,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </li>
 <li>A one-dimensional array containing the numbers from 0 to 9<br>
 </li>
-<li>A two-dimensional array of shape 3×33×3 filled with ones<br>
-</li>
+<li>A two-dimensional array of shape 3×3 filled with ones</li>
 <li>A one-dimensional array containing numbers from 10 to 50 (inclusive) in steps of 5</li>
 </ol>
 </section>
@@ -364,7 +368,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 <section id="task-4" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="task-4">Task 4</h2>
 <p>What data type does the following array have? Which function can be used to read the data type of an array?</p>
-<div id="1e43ef13" class="cell" data-execution_count="2">
+<div id="2b62c0e2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> np.array([ <span class="fl">4.8</span>,  <span class="fl">8.2</span>, <span class="fl">15.6</span>, <span class="fl">16.6</span>, <span class="fl">23.2</span>, <span class="fl">42.8</span> ])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -391,7 +395,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </section>
 <section id="task-7" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="task-7">Task 7</h2>
-<div id="52c97930" class="cell" data-execution_count="3">
+<div id="35dafc75" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>],</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>, <span class="dv">10</span>],</span>
@@ -410,7 +414,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </section>
 <section id="task-8" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="task-8">Task 8</h2>
-<div id="8885b046" class="cell" data-execution_count="4">
+<div id="143ccd2f" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">21</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ol type="1">
@@ -446,13 +450,13 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 <div class="callout-body-container callout-body">
 <section id="task-1-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="task-1-1">Task 1</h3>
-<div id="f0855077" class="cell" data-execution_count="5">
+<div id="3f324645" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="task-2-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="task-2-1">Task 2</h3>
-<div id="3b418b08" class="cell" data-execution_count="6">
+<div id="4fc0d56f" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -486,7 +490,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 <section id="task-4-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="task-4-1">Task 4</h3>
 <p>Since these are floating-point numbers, the data type is <code>float64</code>.</p>
-<div id="ad223221" class="cell" data-execution_count="7">
+<div id="0bf48649" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> np.array([ <span class="fl">4.8</span>,  <span class="fl">8.2</span>, <span class="fl">15.6</span>, <span class="fl">16.6</span>, <span class="fl">23.2</span>, <span class="fl">42.8</span> ])</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vector.dtype)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -496,7 +500,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </section>
 <section id="task-5-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="task-5-1">Task 5</h3>
-<div id="bccbdbfb" class="cell" data-execution_count="8">
+<div id="775b888b" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">4</span>])</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">9</span>])</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -520,7 +524,7 @@ a plus 3 is: [8 4 6 9 7]</code></pre>
 </section>
 <section id="task-6-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="task-6-1">Task 6</h3>
-<div id="7835fac6" class="cell" data-execution_count="9">
+<div id="f2b32aed" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">3</span>])</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.</span></span>
@@ -546,7 +550,7 @@ Maximum: 9</code></pre>
 </section>
 <section id="task-7-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="task-7-1">Task 7</h3>
-<div id="8110e62d" class="cell" data-execution_count="10">
+<div id="863cb0af" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>],</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>, <span class="dv">10</span>],</span>
@@ -574,7 +578,7 @@ Maximum: 9</code></pre>
 </section>
 <section id="task-8-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="task-8-1">Task 8</h3>
-<div id="f0205c41" class="cell" data-execution_count="11">
+<div id="d505f32d" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">21</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Reshape to 4x5</span></span>
@@ -1061,4 +1065,4 @@ Transposed 4x5 matrix:
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen/blob/main/skript/assessment_en.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen-en/blob/main/skript/assessment_en.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
