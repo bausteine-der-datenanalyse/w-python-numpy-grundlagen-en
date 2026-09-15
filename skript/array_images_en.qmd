@@ -32,7 +32,7 @@ Using the `plt.imshow` function, the image can be displayed in true color. This 
 plt.imshow(data)
 ```
 
-Of course, the individual color channels can also be viewed separately. We do this by fixing the last index. Here we look only at the red component of the image. When displaying a simple array, the output is in grayscale. With the option `cmap='Reds'`, we can adjust the color scale.
+Of course, the individual color channels can also be viewed separately. We do this by fixing the last index. Here we look only at the red component of the image. When displaying a simple array, the output uses the default color palette 'viridis'. With the option `cmap='Reds'`, we can adjust the color scale.
 
 ```{python}
 # Use the red color scale 'Reds'
