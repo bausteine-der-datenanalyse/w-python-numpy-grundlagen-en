@@ -29,7 +29,7 @@ Use NumPy to create the following arrays:
 
 1. Convert the list [1, 2, 3] into a NumPy array  
 2. A one-dimensional array containing the numbers from 0 to 9  
-3. A two-dimensional array of shape 3×33×3 filled with ones  
+3. A two-dimensional array of shape 3×3 filled with ones
 4. A one-dimensional array containing numbers from 10 to 50 (inclusive) in steps of 5
 
 ## Task 3 {.unnumbered}
