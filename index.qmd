@@ -9,7 +9,7 @@ Building Blocks of Computer-Assisted Data Analysis. "NumPy Fundamentals" by Luka
 Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch and 
 Sebastian Seipel is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en). 
 The work is available at <https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen-en>. 
-Excluded from the license are all logos and other content marked otherwise. 2024
+Excluded from the license are all logos and other content marked otherwise. 2026
 
 :::
 
